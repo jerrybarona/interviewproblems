@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace InterviewProblems.Microsoft
+﻿namespace InterviewProblems.Microsoft
 {
     public class P004LongestSubstringWihtoutTwoContiguousOccurrencesOfLetter
     {

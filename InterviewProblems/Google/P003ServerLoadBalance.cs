@@ -1,12 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace InterviewProblems.Google
 {
     public class P003ServerLoadBalance
     {
+        // https://leetcode.com/discuss/interview-question/352460/Google-Online-Assessment-Questions
+
         public int ServerLoadBalance(int[] arr)
         {
             var min = int.MaxValue;

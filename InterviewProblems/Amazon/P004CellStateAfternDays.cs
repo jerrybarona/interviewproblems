@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 
 namespace InterviewProblems.Amazon
 {
     public class P004CellStateAfternDays
     {
+        //https://aonecode.com/amazon-online-assessment-questions
+
         public int[] NextState(int[] input, int k)
         {
             var state = GetIntState();

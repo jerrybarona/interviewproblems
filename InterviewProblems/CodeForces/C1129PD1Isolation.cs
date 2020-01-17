@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace InterviewProblems.CodeForces
 {
-    public class C1129PD1Isolation
+    public class C1129Pd1Isolation
     {
         /*
          * https://codeforces.com/contest/1129/problem/D

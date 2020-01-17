@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace InterviewProblems.LeetCode
 {
@@ -11,7 +9,7 @@ namespace InterviewProblems.LeetCode
 
         public bool CanFinish(int numCourses, int[][] prerequisites)
         {
-            var x = (pac : (bool?)null, atl : (bool?)null);
+            //var x = (pac : (bool?)null, atl : (bool?)null);
             var graph = prerequisites.Aggregate(new HashSet<int>[numCourses],
             (nodes, x) =>
             {                

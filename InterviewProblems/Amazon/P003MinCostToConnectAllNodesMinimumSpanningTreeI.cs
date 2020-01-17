@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace InterviewProblems.Amazon
 {
     public class P003MinCostToConnectAllNodesMinimumSpanningTreeI
     {
+        // https://aonecode.com/amazon-online-assessment-questions
         public int Compute(int n, int[][] edges, int[][] newEdges)
         {
             var parents = Enumerable.Range(0, n + 1).ToArray();

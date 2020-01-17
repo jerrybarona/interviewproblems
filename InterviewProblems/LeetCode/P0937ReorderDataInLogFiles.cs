@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace InterviewProblems.Amazon
+namespace InterviewProblems.LeetCode
 {
-    public class P002LogFile
+    public class P0937ReorderDataInLogFiles
     {
         public List<string> Reorder(int logFileSize, string[] logLines)
         {
-            var splitLines = logLines.Select(logLine => logLine.Split(' ', 2));
+            var splitLines = logLines.Select(logLine => logLine.Split(' ', 2)).ToList();
 
             return splitLines.Where(line => char.IsLetter(line[1][0]))
                 .OrderBy(x => x[1])

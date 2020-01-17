@@ -1,12 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 
 namespace InterviewProblems.Google
 {
     public class P001TwoFingerTyping
     {
+        //https://leetcode.com/discuss/interview-question/456785/Google-or-Onsite-or-Two-Finger-Typing
+
         public int MinimunDistance(string str)
         {
             var charMap = new (int i, int j)[]

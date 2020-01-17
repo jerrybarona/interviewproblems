@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace InterviewProblems.Amazon
 {
     public class P005ConnectRopes
     {
+        // https://aonecode.com/amazon-online-assessment-questions
         public int Cost(int[] ropes)
         {
             Array.Sort(ropes);

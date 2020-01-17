@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace InterviewProblems.Amazon
 {
     public class P005ShoekeeperSale
     {
+        // https://aonecode.com/amazon-online-assessment-questions
+
         public (int total,int[] nondisc) Sales(int[] items)
         {
             var stack = new Stack<int>(items.Length);

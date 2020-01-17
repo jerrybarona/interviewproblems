@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -10,8 +8,8 @@ namespace InterviewProblems.Cracking
     {
         public void Run()
         {
-            var chopsticks = new Chopstick[] { new Chopstick(0), new Chopstick(1), new Chopstick(2) };
-            var philosophers = new Philosopher[]
+            var chopsticks = new[] { new Chopstick(0), new Chopstick(1), new Chopstick(2) };
+            var philosophers = new[]
             {
                 new Philosopher(0, chopsticks[0], chopsticks[1]), new Philosopher(1, chopsticks[1], chopsticks[2]), new Philosopher(2, chopsticks[2], chopsticks[0])
             };
@@ -76,7 +74,7 @@ namespace InterviewProblems.Cracking
 
     public class Chopstick
     {
-        public readonly object _lock = new object();
+        private readonly object _lock = new object();
         public int Id { get; }
 
         public Chopstick(int id)
@@ -86,7 +84,7 @@ namespace InterviewProblems.Cracking
 
         public void PickUp()
         {
-            System.Threading.Monitor.Enter(_lock);
+            Monitor.Enter(_lock);
         }
 
         public void PutDown()

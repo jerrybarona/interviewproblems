@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace InterviewProblems.Amazon
 {
     public class P007LongestStringMadeUpOfOnlyVowels
     {
+        // https://aonecode.com/amazon-online-assessment-questions
+
         public int Longest(string str)
         {
             var vowels = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
