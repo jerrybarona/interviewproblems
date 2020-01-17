@@ -17,16 +17,9 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P010PlaceFlagsOnPeaks();
-            var result = sln.PlaceFlags(new[] { 0, 1, 4, 2, 5, 7, 6, 5, 6, 2, 11, 0 });
-
-
-            Console.WriteLine("Result:");
-            Console.WriteLine(result);
-            //foreach (var item in result)
-            //{
-            //    Console.WriteLine(item);
-            //} 
+            var sln = new P022CrosswordSuggestions();
+            sln.CrosswordSuggestionsTest();
+            
             Console.ReadLine();
         }
     }
