@@ -1,8 +1,15 @@
-﻿using InterviewProblems.Cracking;
+﻿using InterviewProblems.CodeForces;
+using InterviewProblems.Cracking;
 using InterviewProblems.LeetCode;
-using InterviewProblems.Tushar;
+using InterviewProblems.DynamicProgramming;
 using System;
 using System.Collections.Generic;
+using InterviewProblems.Amazon;
+using InterviewProblems.Utilities;
+using System.Linq;
+using InterviewProblems.Concurrency;
+using InterviewProblems.Google;
+using InterviewProblems.Microsoft;
 
 namespace InterviewProblems
 {
@@ -10,13 +17,16 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P0140WordBreakII();
-            var result = sln.WordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new List<string> { "a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa" });
+            var sln = new P010PlaceFlagsOnPeaks();
+            var result = sln.PlaceFlags(new[] { 0, 1, 4, 2, 5, 7, 6, 5, 6, 2, 11, 0 });
+
+
             Console.WriteLine("Result:");
-            foreach (var r in result)
-            {
-                Console.WriteLine(r);
-            }
+            Console.WriteLine(result);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //} 
             Console.ReadLine();
         }
     }

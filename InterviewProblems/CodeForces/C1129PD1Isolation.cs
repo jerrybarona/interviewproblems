@@ -10,26 +10,32 @@ namespace InterviewProblems.CodeForces
         /*
          * https://codeforces.com/contest/1129/problem/D
          */
-
-        public int Solve(int[] a, int k)
+         public int Solve(int[] nums, int k)
         {
-            var memo = Enumerable.Repeat(1, a.Length).Select(x => new int[a.Length]).ToArray();
+            var memo = new int[nums.Length + 1];
+            memo[0] = 1;
 
-            for (var i = 0; i < a.Length; ++i)
+            for (var i = 1; i < memo.Length; ++i)
             {
-                var seen = new HashSet<int>();
-                for (var j = i; j >= 0; --j)
+                var uniques = new HashSet<int>();
+                var repeats = new HashSet<int>();
+                for (var j = i; j >= 1; --j)
                 {
-                    seen.Add(a[j]);
-                    if (seen.Count <= k)
+                    var num = nums[j - 1];
+                    if (!repeats.Contains(num))
                     {
+                        if (uniques.Contains(num))
+                        {
+                            uniques.Remove(num);
+                            repeats.Add(num);
+                        }
+                        else uniques.Add(num);
                     }
-
-                    if (seen.Count > k) break;
+                    if (uniques.Count <= k) memo[i] += memo[j - 1];
                 }
             }
 
-            return 0;
+            return memo[nums.Length];
         }
     }
 }
