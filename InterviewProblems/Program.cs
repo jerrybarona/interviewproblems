@@ -17,8 +17,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P022CrosswordSuggestions();
-            sln.CrosswordSuggestionsTest();
+            var sln = new P0907SumOfSubarrayMinimums();
+            sln.SumSubarrayMinsTest();
             
             Console.ReadLine();
         }
