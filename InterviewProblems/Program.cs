@@ -17,8 +17,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P0554BrickWall();
-            sln.LeastBricksTest();
+            var sln = new P0722RemoveComments();
+            sln.RemoveCommentsTest();
             
             Console.ReadLine();
         }
