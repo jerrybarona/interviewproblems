@@ -10,6 +10,7 @@ using System.Linq;
 using InterviewProblems.Concurrency;
 using InterviewProblems.Google;
 using InterviewProblems.Microsoft;
+using InterviewProblems.Oracle;
 
 namespace InterviewProblems
 {
@@ -17,8 +18,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P0722RemoveComments();
-            sln.RemoveCommentsTest();
+            var sln = new P001NodeDependencies();
+            sln.NodeDependenciesTest();
             
             Console.ReadLine();
         }
