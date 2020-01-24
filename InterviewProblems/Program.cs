@@ -18,8 +18,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P001NodeDependencies();
-            sln.NodeDependenciesTest();
+            var sln = new P003WordGrid();
+            sln.GetWordGridsTest();
             
             Console.ReadLine();
         }
