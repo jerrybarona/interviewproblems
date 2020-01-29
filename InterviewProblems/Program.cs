@@ -18,8 +18,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P003WordGrid();
-            sln.GetWordGridsTest();
+            var sln = new P004SaddlePoint();
+            sln.SaddlePointTest();
             
             Console.ReadLine();
         }
