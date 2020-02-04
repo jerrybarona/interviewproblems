@@ -18,8 +18,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P028MinimumCostToMakeSticksTheSameLength();
-            sln.MinCostTest();
+            var sln = new P016MinModifications();
+            sln.MinModificationTest();
             
             Console.ReadLine();
         }
