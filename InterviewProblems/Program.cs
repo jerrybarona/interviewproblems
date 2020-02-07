@@ -18,8 +18,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P016MinModifications();
-            sln.MinModificationTest();
+            var sln = new P029MinimumJumpsWithBoosters();
+            sln.MinimumJumpsWithBoostersTest();
             
             Console.ReadLine();
         }

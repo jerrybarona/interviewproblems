@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace InterviewProblems.Google
 {
-    public class P016FindAssignmentOfBreadSlice
+    public class P017FindAssignmentOfBreadSlice
     {
         // https://leetcode.com/discuss/interview-question/480256/Google-or-Onsite-or-Find-assignment-of-bread-slice
 
