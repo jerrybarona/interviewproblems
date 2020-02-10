@@ -18,8 +18,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P029MinimumJumpsWithBoosters();
-            sln.MinimumJumpsWithBoostersTest();
+            var sln = new P0743NetworkDelayTime();
+            sln.NetworkDelayTimeTest();
             
             Console.ReadLine();
         }
