@@ -18,8 +18,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P0743NetworkDelayTime();
-            sln.NetworkDelayTimeTest();
+            var sln = new P0362DesignHitCounter();
+            sln.HitCounterTest();
             
             Console.ReadLine();
         }
