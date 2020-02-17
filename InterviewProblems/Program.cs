@@ -18,8 +18,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P0683KEmptySlots();
-            sln.KEmptySlotsTest();
+            var sln = new P006FindNulls();
+            sln.FindNullsTest();
             
             Console.ReadLine();
         }
