@@ -20,8 +20,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P0166FractionToRecurringDecimal();
-            sln.FractionToDecimalTest();
+            var sln = new P002SinkZeroesInBinaryTree();
+            sln.SinkZeroesTest();
             
             Console.ReadLine();
         }
