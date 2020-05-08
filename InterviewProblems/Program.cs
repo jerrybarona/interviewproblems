@@ -11,6 +11,7 @@ using InterviewProblems.Concurrency;
 using InterviewProblems.Google;
 using InterviewProblems.Microsoft;
 using InterviewProblems.Oracle;
+using InterviewProblems.AlgoExpert;
 
 namespace InterviewProblems
 {
@@ -18,8 +19,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P006FindNulls();
-            sln.FindNullsTest();
+            var sln = new P0166FractionToRecurringDecimal();
+            sln.FractionToDecimalTest();
             
             Console.ReadLine();
         }
