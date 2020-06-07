@@ -23,8 +23,7 @@ namespace InterviewProblems.LeetCode
 
         public int ShortestDistance(int[][] grid)
         {
-            var u = new ArrayUtilities();
-            u.PrintMatrix(grid);
+            ArrayUtilities.PrintMatrix(grid);
             var (m, n) = (grid.Length, grid[0].Length);
             var buildingCount = grid.SelectMany(x => x.Where(y => y == 1)).Count();
             var reached = Enumerable.Repeat(0, m).Select(x => new int[n]).ToArray();

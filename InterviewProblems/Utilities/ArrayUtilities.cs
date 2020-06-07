@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace InterviewProblems.Utilities
 {
-    public class ArrayUtilities
+    public static class ArrayUtilities
     {
-        public void PrintMatrix(int[][] grid)
+        public static void PrintMatrix(int[][] grid, string separator = "\t")
         {
             foreach (var row in grid)
             {
-                Console.WriteLine(string.Join('\t', row));
+                Console.WriteLine(string.Join(separator, row));
             }
             Console.Write('\n');
         }
