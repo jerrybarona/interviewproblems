@@ -10,7 +10,10 @@ namespace InterviewProblems.Facebook
 
         public void PalindromicSubsequencesTest()
         {
-            var input = "abaca";
+            var input = "abacab";
+            Console.WriteLine($"Input: \"{input}\"\nOuput: [{string.Join(", ", PalindromicSubsequences(input).Select(x => $"\"{x}\""))}]");
+
+            input = "aa";
             Console.WriteLine($"Input: \"{input}\"\nOuput: [{string.Join(", ", PalindromicSubsequences(input).Select(x => $"\"{x}\""))}]");
         }
 

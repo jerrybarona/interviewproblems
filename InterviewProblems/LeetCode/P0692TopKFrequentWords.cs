@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -51,7 +52,7 @@ namespace InterviewProblems.LeetCode
             }
         }
 
-        class MinHeap<T> where T : IComparable<T>
+        class MinHeap<T> : IEnumerable<T> where T : IComparable<T>
         {
             private readonly T[] _elements;
             private int _size;
@@ -124,6 +125,16 @@ namespace InterviewProblems.LeetCode
                     (_elements[idx], _elements[parentIdx]) = (_elements[parentIdx], _elements[idx]);
                     idx = parentIdx;
                 }
+            }
+
+            public IEnumerator<T> GetEnumerator()
+            {
+                while (_size > 0) yield return Pop();
+            }
+
+            IEnumerator IEnumerable.GetEnumerator()
+            {
+                return GetEnumerator();
             }
         }
     }

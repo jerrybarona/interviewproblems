@@ -22,8 +22,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P0092ReverseLinkedList2();
-            sln.ReverseBetweenTest();
+            var sln = new P009MailboxesOnStreet();
+            sln.MailBoxesTest();
             
             Console.ReadLine();
         }
