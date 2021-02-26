@@ -22,8 +22,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P009MailboxesOnStreet();
-            sln.MailBoxesTest();
+            var sln = new P0109ConvertSortedListToBinarySearchTree();
+            sln.SortedListToBSTTest();
             
             Console.ReadLine();
         }

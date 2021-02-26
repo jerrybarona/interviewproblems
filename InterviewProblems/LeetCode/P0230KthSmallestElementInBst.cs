@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using InterviewProblems.Utilities;
 
 namespace InterviewProblems.LeetCode
 {
@@ -66,11 +67,11 @@ namespace InterviewProblems.LeetCode
         }
     }
 
-    public class TreeNode
-    {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-        public TreeNode(int x) { val = x; }
-    }
+    //public class TreeNode
+    //{
+    //    public int val;
+    //    public TreeNode left;
+    //    public TreeNode right;
+    //    public TreeNode(int x) { val = x; }
+    //}
 }

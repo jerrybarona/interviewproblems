@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace InterviewProblems.Utilities
 {
@@ -97,6 +98,7 @@ namespace InterviewProblems.Utilities
         }
     }
 
+    [DebuggerDisplay("val = {val}")]
     public class TreeNode
     {
         public int val;

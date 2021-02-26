@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using InterviewProblems.Utilities;
 
 namespace InterviewProblems.LeetCode
 {
-    public class P0987VerticalOrderTraversalOfBinaryTree
+	public class P0987VerticalOrderTraversalOfBinaryTree
     {
         public IList<IList<int>> VerticalTraversal(TreeNode root)
         {

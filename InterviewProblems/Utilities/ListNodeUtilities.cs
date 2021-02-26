@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace InterviewProblems.Utilities
 {
@@ -74,6 +75,7 @@ namespace InterviewProblems.Utilities
         }
     }
 
+    [DebuggerDisplay("val = {val}")]
     public class ListNode : IEnumerable<int>
     {
         public int val { get; set; }
