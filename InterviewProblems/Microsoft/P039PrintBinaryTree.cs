@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace InterviewProblems.Microsoft
 {
-    public class P026PrintBinaryTree
+    public class P039PrintBinaryTree
     {
         // https://leetcode.com/discuss/interview-question/438544/Microsoft-or-Onsite-or-Print-Binary-Tree
 

@@ -22,8 +22,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P0109ConvertSortedListToBinarySearchTree();
-            sln.SortedListToBSTTest();
+            var sln = new P0388LongestAbsoluteFilePath();
+            sln.LengthLongestPathTest();
             
             Console.ReadLine();
         }
