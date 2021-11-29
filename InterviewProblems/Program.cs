@@ -15,6 +15,7 @@ using InterviewProblems.Oracle;
 using InterviewProblems.AlgoExpert;
 using InterviewProblems.Bloomberg;
 using InterviewProblems.InterviewCake;
+using InterviewProblems.CodeChef;
 
 namespace InterviewProblems
 {
@@ -22,8 +23,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P0388LongestAbsoluteFilePath();
-            sln.LengthLongestPathTest();
+            var sln = new SnakeEat();
+            sln.SnakeEatTest();
             
             Console.ReadLine();
         }
