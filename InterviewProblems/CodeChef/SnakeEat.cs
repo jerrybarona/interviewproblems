@@ -9,30 +9,42 @@ namespace InterviewProblems.CodeChef
 		// https://www.codechef.com/SNCKQL17/problems/SNAKEEAT
 		public void SnakeEatTest()
 		{
-			int[] l;
-			int[] q;
-
-			l = new[] { 21, 9, 5, 8, 10 };
-			q = new[] { 10, 15 };
-			Console.WriteLine($"[ {string.Join(", ", MaxNumberOfSnakes(l, q))} ]");
-
-			l = new[] { 1, 2, 3, 4, 5 };
-			q = new[] { 100, 6, 3, 1, 9, 8 };
-			Console.WriteLine($"[ {string.Join(", ", MaxNumberOfSnakes(l, q))} ]");
+			foreach (var (lengths, queries) 
+				in new (int[] lengths, int[] queries)[]
+				{
+					(new[] { 21, 9, 5, 8, 10 }, new[] { 10, 15 }),
+					(new[] { 1, 2, 3, 4, 5 }, new[] { 100, 6, 3, 1, 9, 8 })
+				})
+			{
+				Console.WriteLine($"\nSnakes:\n[ {string.Join(", ", lengths)} ]");
+				Console.WriteLine($"Queries:\n[ {string.Join(", ", queries)} ]");
+				Console.WriteLine($"Result:\n[ {string.Join(", ", MaxNumberOfSnakes(lengths, queries))} ]");
+			}
 		}
 
+		/*
+		 Optimal solution.
+		
+		Time Complexity analysis
+		------------------------
+		Let L be the number of snakes and Q be the number of queries.
+		Then, the time complexity will be:
+		  O(L * log(L)) + O(Q * log(L)) = O ( (L+Q)*log(L) ) 
+		  
+		  Sorting will take L * log (L).
+		  For each query in queries, a binary search operation will be performed
+		 */
 		public IEnumerable<int> MaxNumberOfSnakes(int[] lengths, IEnumerable<int> queries)
 		{
 			Array.Sort(lengths, (a, b) => b - a);
 			var len = lengths.Length;
-			var cummSum = lengths.Aggregate(new List<int>(), (list, num) =>
-			{
-				var count = list.Count;
-				if (count == 0) list.Add(num);
-				else list.Add(list.Last() + num);
 
-				return list;
-			});
+			var prefixSum = lengths
+				.Aggregate(
+					(list: Enumerable.Empty<int>(), acumm: 0),
+					(t, num) => (t.list.Append(num + t.acumm), num + t.acumm))
+				.list
+				.ToArray();
 
 			return queries.Select(q => Query(q));
 
@@ -41,12 +53,12 @@ namespace InterviewProblems.CodeChef
 				var orig = FindClosestFirst(val - 1);
 				if (orig == -1) return len;
 
-				var minSum = orig > 0 ? cummSum[orig - 1] : 0;
+				var minSum = orig > 0 ? prefixSum[orig - 1] : 0;
 				var idx = orig-1;
 
 				for (var (start, end, mid) = (orig, len-1, orig + (len - 1 - orig) /2); start <= end; mid = start + (end-start)/2)
 				{
-					var queriedSum = (mid - orig + 1)*val - (cummSum[mid] - minSum);
+					var queriedSum = (mid - orig + 1)*val - (prefixSum[mid] - minSum);
 					
 					if (len - 1 - mid < queriedSum) end = mid - 1;
 					else
