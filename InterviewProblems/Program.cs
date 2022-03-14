@@ -23,8 +23,8 @@ namespace InterviewProblems
     {
         static void Main(string[] args)
         {
-            var sln = new P0051NQueens();
-            sln.SolveNQueensTest();
+            var sln = new P0037SudokuSolver();
+            sln.SolveSudokuTest();
             
             Console.ReadLine();
         }
