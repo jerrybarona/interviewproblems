@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InterviewProblems.LeetCode
 {
@@ -53,7 +50,7 @@ namespace InterviewProblems.LeetCode
 
             var currSquare = squares.First;
             var isBoardFilled = false;
-            
+
             FillBoard();
 
             void FillBoard()
@@ -119,7 +116,7 @@ namespace InterviewProblems.LeetCode
             void ResolveSingleCandidateSquares()
             {
                 var isUpdated = false;
-                for (var node = squares.First; node != null; )
+                for (var node = squares.First; node != null;)
                 {
                     var (r, c) = node.Value;
                     var b = BoxIdx(r, c);
@@ -170,7 +167,7 @@ namespace InterviewProblems.LeetCode
                 return (val & (val - 1)) == 0;
             }
 
-            static int BoxIdx(int r, int c) => (r / 3) * 3 + c / 3;            
+            static int BoxIdx(int r, int c) => (r / 3) * 3 + c / 3;
         }
     }
 }

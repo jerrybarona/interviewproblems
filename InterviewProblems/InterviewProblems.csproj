@@ -5,4 +5,12 @@
 	  <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\jerrybarona\source\repos\jerrybarona\interviewproblems\InterviewProblems\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\jerrybarona\source\repos\jerrybarona\interviewproblems\InterviewProblems\.editorconfig" />
+  </ItemGroup>
+
 </Project>
