@@ -57,6 +57,10 @@ dotnet_style_prefer_conditional_expression_over_assignment = true:silent
 dotnet_style_prefer_conditional_expression_over_return = true:silent
 dotnet_style_prefer_compound_assignment = true:silent
 ###############################
+# Unnecessary Code Rules      #
+###############################
+dotnet_code_quality_unused_parameters = all:silent
+###############################
 # Naming Conventions          #
 ###############################
 # Style Definitions
@@ -104,6 +108,11 @@ csharp_style_deconstructed_variable_declaration = true:suggestion
 csharp_prefer_simple_default_expression = true:suggestion
 csharp_style_pattern_local_over_anonymous_function = true:suggestion
 csharp_style_inlined_variable_declaration = true:suggestion
+###############################
+# C# Unnecessary Code Rules   #
+###############################
+csharp_style_unused_value_expression_statement_preference = discard_variable:silent
+csharp_style_unused_value_assignment_preference = discard_variable:silent
 ###############################
 # C# Formatting Rules         #
 ###############################
