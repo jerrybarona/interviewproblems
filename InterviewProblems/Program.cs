@@ -16,17 +16,11 @@ using InterviewProblems.AlgoExpert;
 using InterviewProblems.Bloomberg;
 using InterviewProblems.InterviewCake;
 using InterviewProblems.CodeChef;
+using InterviewProblems.Others;
+using InterviewProblems.InterviewIo;
+using InterviewProblems;
 
-namespace InterviewProblems
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var sln = new P0493ReversePairs();
-            sln.ReversePairsTest();
-            
-            Console.ReadLine();
-        }
-    }
-}
+ITestable sln = new SpendMoneyOnGiftCard();
+sln.RunTest();
+
+Console.ReadLine();
