@@ -14,6 +14,7 @@ namespace InterviewProblems.LeetCode
 
         public IList<string> InvalidTransactions(string[] transactions)
         {
+            var x = new PriorityQueue<int, int>(new[] { (5,0)},Comparer<int>.Create( (a, b) => a - b));
             var result = new List<string>();
             HashSet<string>[] cities;
             Dictionary<(int time, string city), List<int>> amounts;

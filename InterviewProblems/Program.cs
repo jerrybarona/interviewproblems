@@ -19,8 +19,10 @@ using InterviewProblems.CodeChef;
 using InterviewProblems.Others;
 using InterviewProblems.InterviewIo;
 using InterviewProblems;
+using InterviewProblems.Netflix;
+using InterviewProblems.TikTok;
 
-ITestable sln = new SpendMoneyOnGiftCard();
+ITestable sln = new P003SubarraysWithKDifferentIntegers();
 sln.RunTest();
 
 Console.ReadLine();
