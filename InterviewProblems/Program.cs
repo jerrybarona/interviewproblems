@@ -21,8 +21,14 @@ using InterviewProblems.InterviewIo;
 using InterviewProblems;
 using InterviewProblems.Netflix;
 using InterviewProblems.TikTok;
+using InterviewProblems.GeeksForGeeks;
+using InterviewProblems.UiPath;
+using InterviewProblems.Docusign;
+using InterviewProblems.DoorDash;
+using InterviewProblems.Stripe;
 
-ITestable sln = new P003SubarraysWithKDifferentIntegers();
+ITestable sln = new P001FoodCombinationsInSupermarketAisles();
 sln.RunTest();
 
+Console.WriteLine("\nFinished test execution.");
 Console.ReadLine();
