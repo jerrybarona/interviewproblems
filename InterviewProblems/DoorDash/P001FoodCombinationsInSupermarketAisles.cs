@@ -17,6 +17,7 @@ namespace InterviewProblems.DoorDash
                 (new [] { 3 }, "WWWWWWW"), // output: ...
                 (new [] { 3 }, "??????"), // output: FFFWWW,WFFFWW,WWFFFW,WWWFFF
                 (new [] { 1, 3 }, "??????"), // output: FWFFFW,FWWFFF,WFWFFF
+                (new [] { 3, 1 }, "F?F?F?F?F?"), // output: 
             })
             {
                 Console.WriteLine(string.Join(",", FoodCombinations(contiguous, aisle)));
@@ -35,13 +36,12 @@ namespace InterviewProblems.DoorDash
             {
                 if (cidx >= contiguous.Length)
                 {
-                    var rem = new StringBuilder();
-                    while (aidx < aisle.Length)
+                    for (; aidx < aisle.Length; ++aidx)
                     {
-                        rem.Append(aisle[aidx] == 'F' ? 'F' : 'W');
-                        ++aidx;
+                        sb.Append(aisle[aidx] == 'F' ? 'F' : 'W');
                     }
-                    result.Add(sb.ToString() + rem.ToString());
+
+                    result.Add(sb.ToString());
                     return;
                 }
 

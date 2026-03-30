@@ -22,6 +22,16 @@ namespace InterviewProblems.CodeChef
 			}
 		}
 
+        public string GiveSt(bool a, bool b, bool c)
+        {
+            if (!(!a || b && !c))
+            {
+                return "a";
+            }
+
+            return "b";
+        }
+
 		/*
 		 Optimal solution.
 		

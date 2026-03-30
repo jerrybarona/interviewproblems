@@ -27,7 +27,7 @@ using InterviewProblems.Docusign;
 using InterviewProblems.DoorDash;
 using InterviewProblems.Stripe;
 
-ITestable sln = new P001FoodCombinationsInSupermarketAisles();
+ITestable sln = new P3651MinimumCostPathWithTeleportation();
 sln.RunTest();
 
 Console.WriteLine("\nFinished test execution.");

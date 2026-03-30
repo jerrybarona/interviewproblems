@@ -1,73 +1,124 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+
+using InterviewProblems.Utilities;
 
 namespace InterviewProblems.LeetCode
 {
-    public class P0723CandyCrush
+    public class P0723CandyCrush : ITestable
     {
+        public void RunTest()
+        {
+            foreach (var board in new int[][][]
+            {
+                new[]
+                {
+                    new[] {110,5,112,113,114},
+                    new[] {210,211,5,213,214},
+                    new[] {310,311,3,313,314},
+                    new[] {410,411,412,5,414},
+                    new[] {5,1,512,3,3},
+                    new[] {610,4,1,613,614},
+                    new[] {710,1,2,713,714},
+                    new[] {810,1,2,1,1},
+                    new[] {1,1,2,2,2},
+                    new[] {4,1,4,4,1014}
+                },
+                new[]
+                {
+                    new[] {1,3,5,5,2},
+                    new[] {3,4,3,3,1},
+                    new[] {3,2,4,5,2},
+                    new[] {2,4,4,5,5},
+                    new[] {1,4,4,1,1}
+                }
+            })
+            {
+                var result = CandyCrush(board);
+                ArrayUtilities.PrintMatrix(result);
+            }
+        }
+
         public int[][] CandyCrush(int[][] board)
         {
             var m = board.Length;
             var n = board[0].Length;
 
-            while (CrushedCandy()) DropCandy();
-
+            while (CanCrush()) Drop();
             return board;
 
-            void DropCandy()
+            void Drop()
             {
-                for (var i = 0; i < n; ++i)
+                for (var j = 0; j < n; ++j)
                 {
-                    var stack = new Stack<int>(board.Select(row => row[i]).Where(x => x > 0));
-                    for (var j = m - 1; j >= 0; --j)
+                    for (var (s, e) = (m - 1, m - 1); e >= 0 && board[e][j] != 0; --e)
                     {
-                        if (stack.Count > 0) board[j][i] = stack.Pop();
-                        else board[j][i] = 0;
+                        if (board[e][j] > 0)
+                        {
+                            (board[e][j], board[s][j]) = (board[s][j], board[e][j]);
+                            --s;
+                        }
+                    }
+
+                    for (var i = 0; i < m && board[i][j] <= 0; ++i)
+                    {
+                        board[i][j] = 0;
                     }
                 }
             }
 
-            bool CrushedCandy()
+            bool CanCrush()
             {
-                var crushed = false;
+                var result = false;
                 for (var i = 0; i < m; ++i)
                 {
-                    for (var (start, end) = (0, 1); end <= n; ++end)
+                    var (s, e) = (0, 0);
+                    for (; e <= n; ++e)
                     {
-                        if (end < n && board[i][end] == board[i][end - 1])
+                        if ((e == n || Math.Abs(board[i][e]) != Math.Abs(board[i][s])))
                         {
-                            if (board[i][end] == 0) start = end;
-                            continue;
+                            if (e - s < 3)
+                            {
+                                s = e;
+                                continue;
+                            }
+
+                            var val = -Math.Abs(board[i][s]);
+                            if (val == 0) continue;
+                            result = true;
+                            while (s < e)
+                            {
+                                board[i][s] = val;
+                                ++s;
+                            }
                         }
-                        if (end - start >= 3)
-                        {
-                            crushed = true;
-                            while (start < end) board[i][start++] *= -1;
-                        }
-                        else start = end;
                     }
                 }
 
-                for (var i = 0; i < n; ++i)
+                for (var j = 0; j < n; ++j)
                 {
-                    for (var (start, end) = (0, 1); end <= m; ++end)
+                    var (s, e) = (0, 0);
+                    for (; e <= m; ++e)
                     {
-                        if (end < m && Math.Abs(board[end][i]) == Math.Abs(board[end - 1][i]))
+                        if ((e == m || Math.Abs(board[e][j]) != Math.Abs(board[s][j])))
                         {
-                            if (board[end][i] == 0) start = end;
-                            continue;
+                            if (e - s < 3)
+                            {
+                                s = e;
+                                continue;
+                            }
+
+                            var val = -Math.Abs(board[s][j]);
+                            if (val == 0) continue;
+                            result = true;
+                            while (s < e)
+                            {
+                                board[s][j] = val;
+                                ++s;
+                            }
                         }
-                        if (end - start >= 3)
-                        {
-                            crushed = true;
-                            while (start < end) board[start][i] = -1 * Math.Abs(board[start++][i]);
-                        }
-                        else start = end;
                     }
                 }
-
-                return crushed;
+                return result;
             }
         }
     }
